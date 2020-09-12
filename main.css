@@ -1,0 +1,37 @@
+/* reset and common */
+body,
+html,
+ul,
+li,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+.nav {
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+}
+
+.list__item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.notice__title {
+  font-size: 32pt;
+  font-weight: 500;
+}
+
+.notice__price {
+  font-weight: 700;
+  font-size: 72pt;
+}

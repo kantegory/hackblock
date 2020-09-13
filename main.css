@@ -70,6 +70,7 @@ div {
   font-size: 48pt;
   width: 75%;
   margin: auto;
+  padding-top: 2rem;
 }
 
 .row {
@@ -84,7 +85,7 @@ div {
 .header,
 .section-format,
 .section-timing {
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
 }
 
 /* header */

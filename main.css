@@ -81,11 +81,17 @@ div {
   font-weight: bold;
 }
 
+.header,
+.section-format,
+.section-timing {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
+}
+
 /* header */
 .header {
   background-image: url('./assets/header_banner.png');
   color: #fff;
-  height: 900px;
+  height: 880px;
   background-repeat: no-repeat;
 }
 
@@ -337,8 +343,8 @@ div {
 
 .program-date {
   transform: rotate(-90deg);
-  width:min-content;
-  height:min-content;
+  width: min-content;
+  height: min-content;
   position: absolute;
   top: 18%;
   left: -40%;

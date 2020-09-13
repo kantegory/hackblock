@@ -12,15 +12,15 @@
   <header class="header">
     <nav class="nav">
       <ul class="nav__list">
-        <li class="list__item"><a href="#">О хакатоне</a></li>
-        <li class="list__item"><a href="#">Формат</a></li>
-        <li class="list__item"><a href="#">Задания</a></li>
-        <li class="list__item"><a href="#">Тайминг</a></li>
-        <li class="list__item"><a href="#">Жюри</a></li>
-        <li class="list__item"><a href="#">Программа</a></li>
-        <li class="list__item"><a href="#">Место</a></li>
-        <li class="list__item"><a href="#">Партнёры</a></li>
-        <li class="list__item"><a href="#">Контакты</a></li>
+        <li class="list__item"><a href="#section-about">О хакатоне</a></li>
+        <li class="list__item"><a href="#section-format">Формат</a></li>
+        <li class="list__item"><a href="#section-tasks">Задания</a></li>
+        <li class="list__item"><a href="#section-timing">Тайминг</a></li>
+        <li class="list__item"><a href="#section-jury">Жюри</a></li>
+        <li class="list__item"><a href="#section-program">Программа</a></li>
+        <li class="list__item"><a href="#section-map">Место</a></li>
+        <li class="list__item"><a href="#section-partners">Партнёры</a></li>
+        <li class="list__item"><a href="#section-contacts">Контакты</a></li>
       </ul>
     </nav>
     <div class="logo">
@@ -43,11 +43,11 @@
     </div>
   </header>
   <main class="main">
-    <section class="main__section section-about">
+    <section class="main__section section-about" id="section-about">
       <h2 class="section__heading">О хакатоне</h2>
       <img src="./assets/section_about.png" alt="">
     </section>
-    <section class="main__section section-format">
+    <section class="main__section section-format" id="section-format">
       <h2 class="section__heading">Формат</h2>
       <div class="row format-card__wrapper">
         <div class="format-card">
@@ -83,12 +83,12 @@
             <div class="format-desc">Здесь должно быть описание онлайн-участия</div>
           </div>
           <div class="format-action">
-            <button class="btn btn--default btn--lg">Подать заявку на онлайн участие</button>
+            <button class="btn btn--default btn--lg">Подать заявку на онлайн-участие</button>
           </div>
         </div>
       </div>
     </section>
-    <section class="main__section section-tasks">
+    <section class="main__section section-tasks" id="section-tasks">
       <h2 class="section__heading">Задания</h2>
       <div class="row">
         <div class="task-card">
@@ -135,10 +135,10 @@
         </div>
       </div>
     </section>
-    <section class="main__section section-timing">
+    <section class="main__section section-timing" id="section-timing">
       <h2 class="section__heading">Таймлайн</h2>
     </section>
-    <section class="main__section section-jury">
+    <section class="main__section section-jury" id="section-jury">
       <h2 class="section__heading">Жюри</h2>
       <div class="row">
         <div class="jury-card">
@@ -199,7 +199,7 @@
         </div>
       </div>
     </section>
-    <section class="main__section section-program">
+    <section class="main__section section-program" id="section-program">
       <h2 class="section__heading">Программа</h2>
       <div class="row">
         <div class="program-item">
@@ -350,8 +350,11 @@
           </ul>
         </div>
       </div>
+      <div class="program-action">
+        <button class="btn btn--grad btn--lg">Принять участие</button>
+      </div>
     </section>
-    <section class="main__section section-map">
+    <section class="main__section section-map" id="section-map">
       <div class="map">
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8f7e4b138bd2f3644061f792adab337fdca59a95dd38077c5e42265b18781f6b&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
       </div>
@@ -362,7 +365,7 @@
         <h2 class="map__address">Биржевая линия, д. 16</h2>
       </div>
     </section>
-    <section class="main__section section-partners">
+    <section class="main__section section-partners" id="section-partners">
       <h2 class="section__heading">Партнёры</h2>
       <div class="row">
         <img src="./assets/partner-1.png" alt="Логотип Университета ИТМО">
@@ -371,7 +374,7 @@
         <img src="./assets/partner-4.png" alt="Логотип студенческого клуба Digital Generation">
       </div>
     </section>
-    <section class="main__section section-contacts">
+    <section class="main__section section-contacts" id="section-contacts">
       <h2 class="section__heading">Контакты</h2>
       <div class="contacts-content">
         <span class="contacts-phrase">По всем вопросам и предложениям</span>

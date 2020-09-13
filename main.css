@@ -1,4 +1,8 @@
 /* reset and common */
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 html,
 ul,
@@ -340,6 +344,16 @@ div {
   left: -40%;
   font-weight: bold;
   font-size: 24pt;
+}
+
+.program-action {
+  display: flex;
+}
+
+.program-action .btn {
+  width: 450px;
+  height: 100px;
+  margin: auto;
 }
 
 /* section-map */

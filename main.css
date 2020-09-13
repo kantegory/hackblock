@@ -36,6 +36,15 @@ div {
   border: 2px solid #02bed2;
 }
 
+.btn--link {
+  background: #fff;
+  color: #410ab5;
+  border: none;
+  height: auto;
+  text-align: left;
+  padding: 1rem 0;
+}
+
 .btn--lg {
   width: 320px;
   height: 80px;
@@ -191,4 +200,32 @@ div {
 
 .format-action .btn {
   width: 100%;
+}
+
+/* section tasks */
+
+.section-tasks .row {
+  justify-content: space-around;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.task-action .btn {
+  width: 100%;
+}
+
+.task-title {
+  font-weight: bold;
+  padding-bottom: 1rem;
+  font-size: 24pt;
+  border-bottom: 2px solid #000;
+  color: #0049d2;
+}
+
+.task-desc {
+  font-size: 18pt;
+  padding-bottom: 3rem;
+  padding-top: 0.5rem;
 }

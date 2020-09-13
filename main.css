@@ -285,14 +285,44 @@ div {
 
 /* section-timing */
 .section-timing {
-  background-image: url('./assets/section_timing.png');
+  /*background-image: url('./assets/section_timing.png');*/
   color: #fff;
-  height: 900px;
+  height: 1000px;
+  position: relative;
 }
 
 .section-timing .section__heading {
   color: #fff;
   padding-top: 2rem;
+  z-index: 3;
+  position: absolute;
+  left: 12.5%;
+}
+
+.timing-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3
+}
+
+.timing-back {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  max-width: 100vw;
+  height: 1000px;
+}
+
+.timing-grad {
+  background: linear-gradient(90deg, #081285, #030a4a);
+  position: absolute;
+  width: 100%;
+  max-width: 100vw;
+  height: 1000px;
+  z-index: 2;
+  opacity: 0.8;
 }
 
 /* section-jury */

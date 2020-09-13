@@ -259,6 +259,28 @@ div {
 
 /* section-map */
 
+.section-map {
+  width: 100%;
+  display: flex;
+}
+
+.map, .map-desc {
+  width: 50%;
+}
+
+.map-desc {
+  background: #020941;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.map__address {
+  font-size: 24pt;
+}
+
 /* section-partners */
 
 /* section-contacts */

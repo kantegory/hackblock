@@ -251,7 +251,8 @@ div {
   position: relative;
 }
 
-.counter-title, .counter-desc {
+.counter-title,
+.counter-desc {
   position: absolute;
   z-index: 4;
   top: 40%;
@@ -339,6 +340,11 @@ div {
 
 .format-action .btn {
   width: 100%;
+}
+
+.format-pict img {
+  width: 96px;
+  margin: auto;
 }
 
 /* section tasks */
@@ -592,4 +598,66 @@ div {
   margin-top: 1rem;
   font-weight: 400;
   font-size: 22pt;
+}
+
+/* flexibility */
+
+@media (min-width: 1368px) and (max-width: 1537px) {
+  .list__item a {
+    font-size: 16pt;
+  }
+
+  .format-title {
+    font-size: 26pt;
+  }
+
+  .section-tasks .row {
+    width: 75%;
+  }
+
+  .timing-content {
+    width: 80%;
+  }
+
+  .section__heading {
+    font-size: 46pt;
+  }
+
+  .jury-title {
+    font-size: 22pt;
+  }
+
+  .section-program .row {
+    width: 80%;
+  }
+
+  .program-date {
+    left: -35%;
+  }
+
+  .section__heading {
+    width: 90%;
+  }
+
+  .section-partners .row {
+    flex-flow: row wrap;
+  }
+
+  .format-card__wrapper {
+    width: 80%;
+  }
+
+  .about-content__wrapper {
+    width: 90vw;
+  }
+
+  .about-content__item:last-child {
+    right: -10%;
+    top: -12%;
+  }
+
+  .about-content__item:first-child {
+    left: 0;
+    top: 5%;
+  }
 }

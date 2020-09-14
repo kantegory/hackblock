@@ -1094,3 +1094,21 @@ div {
     font-size: 20pt;
   }
 }
+
+@media (min-width: 319px) and (max-width: 376px) {
+  .format-card {
+    width: 330px
+  }
+
+  .logo img {
+    width: 350px;
+  }
+
+  .notice__price {
+    font-size: 38pt;
+  }
+
+  .program-date {
+    left: -38%;
+  }
+}

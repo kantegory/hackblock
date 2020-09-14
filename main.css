@@ -1093,6 +1093,14 @@ div {
     font-weight: 700;
     font-size: 20pt;
   }
+
+  .map-logo img {
+    width: 370px
+  }
+
+  .map__address {
+    font-size: 20pt;
+  }
 }
 
 @media (min-width: 319px) and (max-width: 376px) {
@@ -1110,5 +1118,83 @@ div {
 
   .program-date {
     left: -38%;
+  }
+
+  .map-logo img {
+    width: 340px
+  }
+
+}
+
+@media (min-width: 319px) and (max-width: 321px) {
+  .format-card {
+    width: 285px;
+    height: 520px;
+  }
+
+  .logo img {
+    width: 270px;
+  }
+
+  .notice__price {
+    font-size: 32pt;
+  }
+
+  .program-date {
+    left: -35%;
+  }
+
+  .btn--lg {
+    width: 270px;
+    height: 80px;
+    font-size: 14pt;
+  }
+
+  .format-desc {
+    margin-top: 1rem;
+  }
+
+  .format-title {
+    margin-top: 1rem;
+  }
+
+  .format-pict img {
+    width: 72px;
+  }
+
+  .map-logo img {
+    width: 300px
+  }
+
+  .map__address {
+    font-size: 18pt;
+  }
+
+  .contacts-phrase {
+    font-size: 18pt;
+  }
+
+  .contacts-name,
+  .contacts-link {
+    font-size: 16pt;
+  }
+
+  .timing-list {
+    width: 80%;
+  }
+
+  .section-program .row {
+    width: 90%;
+  }
+
+  .program-list__item::after {
+    width: 3px;
+    left: 7px;
+  }
+
+
+  .program-list__item::before {
+    width: 6px;
+    height: 6px;
   }
 }

@@ -602,7 +602,7 @@ div {
 
 /* flexibility */
 
-@media (min-width: 1368px) and (max-width: 1537px) {
+@media (min-width: 1279px) and (max-width: 1537px) {
   .list__item a {
     font-size: 16pt;
   }
@@ -659,5 +659,28 @@ div {
   .about-content__item:first-child {
     left: 0;
     top: 5%;
+  }
+
+  .section-timing .section__heading {
+    left: 5%;
+  }
+}
+
+@media (min-width: 1279px) and (max-width: 1369px) {
+  .about-img {
+    width: 320px;
+  }
+
+  .about-content__wrapper {
+    width: 85vw;
+  }
+
+  .about-content {
+    left: 45%;
+  }
+
+  .about-content__item:last-child {
+    top: -12%;
+    right: -14%;
   }
 }

@@ -905,6 +905,14 @@ div {
 }
 
 @media (min-width: 319px) and (max-width: 415px) {
+  .modal-dialog {
+    max-width: 90vw;
+  }
+
+  .modal-footer .btn {
+    width: 75% !important;
+  }
+
   .nav__list {
     display: none;
   }
@@ -993,7 +1001,7 @@ div {
 
   .format-card {
     width: 370px;
-    height: 470px;
+    height: 490px;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-right: 0;
@@ -1067,7 +1075,7 @@ div {
   .section-timing,
   .timing-grad,
   .timing-back {
-    height: 570px;
+    height: 530px;
   }
 
   .section-timing .section__heading {
@@ -1081,6 +1089,7 @@ div {
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 70%;
   }
 
   .timing-content {
@@ -1359,7 +1368,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .form-group {
@@ -1374,4 +1383,18 @@ textarea {
 
 .modal-footer .btn {
   width: 50%;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.shadow {
+  background: #000;
+  opacity: 0.5;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  z-index: 150
 }

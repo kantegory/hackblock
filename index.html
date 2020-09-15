@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <div class="shadow"></div>
   <header class="header">
     <nav class="nav">
       <ul class="nav__list">
@@ -529,50 +530,56 @@
 </body>
 <script type="text/javascript">
 document.querySelector('.notice__action .btn').addEventListener('click', () => {
-  document.querySelector('#sendRequestModal').classList.add('show');
+  document.querySelector('.shadow').style.display = 'block';
   document.querySelector('#sendRequestModal').style.display = 'block';
-  document.querySelector('body').classList.add('modal-open');
+  document.querySelector('#sendRequestModal').classList.add('show');
+  document.querySelector('html').classList.add('modal-open');
 })
 
 document.querySelector('.program-action .btn').addEventListener('click', () => {
-  document.querySelector('#sendRequestModal').classList.add('show');
+  document.querySelector('.shadow').style.display = 'block';
   document.querySelector('#sendRequestModal').style.display = 'block';
-  document.querySelector('body').classList.add('modal-open');
+  document.querySelector('#sendRequestModal').classList.add('show');
+  document.querySelector('html').classList.add('modal-open');
 })
 
 Array.from(document.querySelectorAll('.format-action .btn')).map((elem) => {
   elem.addEventListener('click', () => {
-    document.querySelector('#sendRequestModal').classList.add('show');
+    document.querySelector('.shadow').style.display = 'block';
     document.querySelector('#sendRequestModal').style.display = 'block';
-    document.querySelector('body').classList.add('modal-open');
+    document.querySelector('#sendRequestModal').classList.add('show');
+    document.querySelector('html').classList.add('modal-open');
   })
 })
 
 Array.from(document.querySelectorAll('.task-action .btn')).map((elem) => {
   elem.addEventListener('click', () => {
-    document.querySelector('#taskDetailModal').classList.add('show');
+    document.querySelector('.shadow').style.display = 'block';
     document.querySelector('#taskDetailModal').style.display = 'block';
-    document.querySelector('body').classList.add('modal-open');
+    document.querySelector('#taskDetailModal').classList.add('show');
+    document.querySelector('html').classList.add('modal-open');
   })
 })
 
 Array.from(document.querySelectorAll('.close')).map((elem) => {
   elem.addEventListener('click', () => {
+    document.querySelector('.shadow').style.display = 'none';
     document.querySelector('#taskDetailModal').classList.remove('show');
     document.querySelector('#sendRequestModal').classList.remove('show');
     document.querySelector('#sendRequestModal').style.display = 'none';
     document.querySelector('#taskDetailModal').style.display = 'none';
-    document.querySelector('body').classList.remove('modal-open');
+    document.querySelector('html').classList.remove('modal-open');
   })
 })
 
 Array.from(document.querySelectorAll('.modal-footer .btn')).map((elem) => {
   elem.addEventListener('click', () => {
+    document.querySelector('.shadow').style.display = 'none';
     document.querySelector('#taskDetailModal').classList.remove('show');
     document.querySelector('#sendRequestModal').classList.remove('show');
     document.querySelector('#sendRequestModal').style.display = 'none';
     document.querySelector('#taskDetailModal').style.display = 'none';
-    document.querySelector('body').classList.remove('modal-open');
+    document.querySelector('html').classList.remove('modal-open');
   })
 })
 

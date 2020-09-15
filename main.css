@@ -561,11 +561,13 @@ div {
 .section-partners .row {
   margin-top: 5rem;
   margin-bottom: 5rem;
+  flex-flow: row wrap;
 }
 
 .section-partners .row img {
   margin-left: 1rem;
   margin-right: 1rem;
+  width: 300px;
 }
 
 /* section-contacts */

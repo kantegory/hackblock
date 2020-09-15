@@ -480,6 +480,102 @@
       </div>
     </section>
   </main>
+  <div class="modal fade" id="sendRequestModal" tabindex="-1" role="dialog" aria-labelledby="sendRequestModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="sendRequestModalLabel">Заявка</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Комада:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Текст заявки:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--grad">Отправить заявку</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="taskDetailModal" tabindex="-1" role="dialog" aria-labelledby="taskDetailModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="taskDetailModalLabel">Задача</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>Название задачи</h4>
+          <p>Описание задачи</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--grad">ОК</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+<script type="text/javascript">
+document.querySelector('.notice__action .btn').addEventListener('click', () => {
+  document.querySelector('#sendRequestModal').classList.add('show');
+  document.querySelector('#sendRequestModal').style.display = 'block';
+  document.querySelector('body').classList.add('modal-open');
+})
+
+document.querySelector('.program-action .btn').addEventListener('click', () => {
+  document.querySelector('#sendRequestModal').classList.add('show');
+  document.querySelector('#sendRequestModal').style.display = 'block';
+  document.querySelector('body').classList.add('modal-open');
+})
+
+Array.from(document.querySelectorAll('.format-action .btn')).map((elem) => {
+  elem.addEventListener('click', () => {
+    document.querySelector('#sendRequestModal').classList.add('show');
+    document.querySelector('#sendRequestModal').style.display = 'block';
+    document.querySelector('body').classList.add('modal-open');
+  })
+})
+
+Array.from(document.querySelectorAll('.task-action .btn')).map((elem) => {
+  elem.addEventListener('click', () => {
+    document.querySelector('#taskDetailModal').classList.add('show');
+    document.querySelector('#taskDetailModal').style.display = 'block';
+    document.querySelector('body').classList.add('modal-open');
+  })
+})
+
+Array.from(document.querySelectorAll('.close')).map((elem) => {
+  elem.addEventListener('click', () => {
+    document.querySelector('#taskDetailModal').classList.remove('show');
+    document.querySelector('#sendRequestModal').classList.remove('show');
+    document.querySelector('#sendRequestModal').style.display = 'none';
+    document.querySelector('#taskDetailModal').style.display = 'none';
+    document.querySelector('body').classList.remove('modal-open');
+  })
+})
+
+Array.from(document.querySelectorAll('.modal-footer .btn')).map((elem) => {
+  elem.addEventListener('click', () => {
+    document.querySelector('#taskDetailModal').classList.remove('show');
+    document.querySelector('#sendRequestModal').classList.remove('show');
+    document.querySelector('#sendRequestModal').style.display = 'none';
+    document.querySelector('#taskDetailModal').style.display = 'none';
+    document.querySelector('body').classList.remove('modal-open');
+  })
+})
+
+</script>
 
 </html>

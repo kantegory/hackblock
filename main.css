@@ -1189,13 +1189,14 @@ div {
 
   .program-list__item::after {
     width: 3px;
-    left: 7px;
+    left: 9px;
+    height: 95px;
   }
-
 
   .program-list__item::before {
     width: 6px;
     height: 6px;
+    border-width: 6px
   }
 
   .map,

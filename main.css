@@ -613,6 +613,10 @@ div {
 /* flexibility */
 
 @media (min-width: 415px) and (max-width: 1537px) {
+  .modal-footer .btn {
+    width: 70% !important;
+  }
+
   .list__item a {
     font-size: 16pt;
   }

@@ -37,7 +37,7 @@
           <span class="info-item__text">Биржевая линия, д. 16</span></div>
       </div>
       <div class="notice__action">
-        <button class="btn btn--grad btn--lg">Принять участие</button>
+        <button class="btn btn--grad btn--lg" onclick="window.location = '/services/'">Принять участие</button>
       </div>
     </div>
     <img class="header-img" src="./assets/header-img.png" alt="">
@@ -121,7 +121,7 @@
           <div class="task-title">Название</div>
           <div class="task-desc">Описание задания и его суть</div>
           <div class="task-action">
-            <button class="btn btn--link">подробнее</button>
+            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
           </div>
         </div>
         <div class="task-card">
@@ -131,7 +131,7 @@
           <div class="task-title">Название</div>
           <div class="task-desc">Описание задания и его суть</div>
           <div class="task-action">
-            <button class="btn btn--link">подробнее</button>
+            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
           </div>
         </div>
       </div>
@@ -143,7 +143,7 @@
           <div class="task-title">Название</div>
           <div class="task-desc">Описание задания и его суть</div>
           <div class="task-action">
-            <button class="btn btn--link">подробнее</button>
+            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
           </div>
         </div>
         <div class="task-card">
@@ -153,7 +153,7 @@
           <div class="task-title">Название</div>
           <div class="task-desc">Описание задания и его суть</div>
           <div class="task-action">
-            <button class="btn btn--link">подробнее</button>
+            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
           </div>
         </div>
       </div>
@@ -318,61 +318,4 @@
     </div>
   </div>
 </body>
-<script type="text/javascript">
-document.querySelector('.notice__action .btn').addEventListener('click', () => {
-  document.querySelector('.shadow').style.display = 'block';
-  document.querySelector('#sendRequestModal').style.display = 'block';
-  document.querySelector('#sendRequestModal').classList.add('show');
-  document.querySelector('html').classList.add('modal-open');
-})
-
-document.querySelector('.program-action .btn').addEventListener('click', () => {
-  document.querySelector('.shadow').style.display = 'block';
-  document.querySelector('#sendRequestModal').style.display = 'block';
-  document.querySelector('#sendRequestModal').classList.add('show');
-  document.querySelector('html').classList.add('modal-open');
-})
-
-Array.from(document.querySelectorAll('.format-action .btn')).map((elem) => {
-  elem.addEventListener('click', () => {
-    document.querySelector('.shadow').style.display = 'block';
-    document.querySelector('#sendRequestModal').style.display = 'block';
-    document.querySelector('#sendRequestModal').classList.add('show');
-    document.querySelector('html').classList.add('modal-open');
-  })
-})
-
-Array.from(document.querySelectorAll('.task-action .btn')).map((elem) => {
-  elem.addEventListener('click', () => {
-    document.querySelector('.shadow').style.display = 'block';
-    document.querySelector('#taskDetailModal').style.display = 'block';
-    document.querySelector('#taskDetailModal').classList.add('show');
-    document.querySelector('html').classList.add('modal-open');
-  })
-})
-
-Array.from(document.querySelectorAll('.close')).map((elem) => {
-  elem.addEventListener('click', () => {
-    document.querySelector('.shadow').style.display = 'none';
-    document.querySelector('#taskDetailModal').classList.remove('show');
-    document.querySelector('#sendRequestModal').classList.remove('show');
-    document.querySelector('#sendRequestModal').style.display = 'none';
-    document.querySelector('#taskDetailModal').style.display = 'none';
-    document.querySelector('html').classList.remove('modal-open');
-  })
-})
-
-Array.from(document.querySelectorAll('.modal-footer .btn')).map((elem) => {
-  elem.addEventListener('click', () => {
-    document.querySelector('.shadow').style.display = 'none';
-    document.querySelector('#taskDetailModal').classList.remove('show');
-    document.querySelector('#sendRequestModal').classList.remove('show');
-    document.querySelector('#sendRequestModal').style.display = 'none';
-    document.querySelector('#taskDetailModal').style.display = 'none';
-    document.querySelector('html').classList.remove('modal-open');
-  })
-})
-
-</script>
-
 </html>

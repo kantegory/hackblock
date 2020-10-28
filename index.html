@@ -118,7 +118,7 @@
           <div class="task-title">Задача #1</div>
           <div class="task-desc">Тестирование формально-верифицированной системы распределённого реестра на наличие уязвимостей</div>
           <div class="task-action">
-            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
+            <button class="btn btn--link" onclick="openDetailModal(0)">подробнее</button>
           </div>
         </div>
         <div class="task-card">
@@ -128,7 +128,7 @@
           <div class="task-title">Задача #2</div>
           <div class="task-desc">Разработка программного обеспечения для задач автоматизации поиска уязвимостей в системе распределённого реестра</div>
           <div class="task-action">
-            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
+            <button class="btn btn--link" onclick="openDetailModal(1)">подробнее</button>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
           <div class="task-title">Задача #3</div>
           <div class="task-desc">Обеспечить передачу данных в неизменном виде из одной блокчейн сети в другую</div>
           <div class="task-action">
-            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
+            <button class="btn btn--link" onclick="openDetailModal(2)">подробнее</button>
           </div>
         </div>
         <div class="task-card">
@@ -150,7 +150,7 @@
           <div class="task-title">Задача #4</div>
           <div class="task-desc">Обеспечить передачу данных в неизменном виде из одной блокчейн сети в другую/в разных блокчейн платформах</div>
           <div class="task-action">
-            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
+            <button class="btn btn--link" onclick="openDetailModal(3)">подробнее</button>
           </div>
         </div>
       </div>
@@ -162,7 +162,7 @@
           <div class="task-title">Задача #5</div>
           <div class="task-desc">Разработать смарт-контракт по динамическому дисконтированию</div>
           <div class="task-action">
-            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
+            <button class="btn btn--link" onclick="openDetailModal(4)">подробнее</button>
           </div>
         </div>
         <div class="task-card">
@@ -172,7 +172,7 @@
           <div class="task-title">Задача #6</div>
           <div class="task-desc">Разработка конструктора внешних Оракулов для передачи данных из внешнего контура в блокчейн сеть</div>
           <div class="task-action">
-            <button class="btn btn--link" onclick="window.location = '/services/'">подробнее</button>
+            <button class="btn btn--link" onclick="openDetailModal(5)">подробнее</button>
           </div>
         </div>
       </div>
@@ -295,19 +295,129 @@
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title" id="taskDetailModalLabel">Задача</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
             ×
           </button>
         </div>
         <div class="modal-body">
-          <h4>Название задачи</h4>
-          <p>Описание задачи</p>
+          <div id="taskDetail"></div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn--grad">ОК</button>
+          <button type="button" class="btn btn--grad" onclick="window.location = '/services'">Принять участие</button>
         </div>
       </div>
     </div>
   </div>
 </body>
 </html>
+<script type="text/javascript">
+function closeModal () {
+  const taskModal = document.querySelector("#taskDetailModal");
+  // открываем модальное окно
+  document.querySelector('.shadow').style.display = 'none';
+  taskModal.style.display = 'none';
+  taskModal.classList.remove('show');
+  document.querySelector('html').classList.remove('modal-open');
+}
+
+function openDetailModal (id) {
+  const tasks = [
+    {
+      title: 'Задача #1',
+      detail: `
+        <p>1) Общая формулировка задачи в одно предложение</p>
+        <p><strong>Тестирование формально-верифицированной системы распределённого реестра на наличие уязвимостей</strong></p>
+        <br>
+        <p>2) Описание окружения, в котором возникает задача</p>
+        <p>a) Описание окружения</p>
+        <p>Первый этап: среда виртуализации QEMU</p>
+        <p>Второй этап: персональные компьютеры/сервера</p>
+        <p>b) Этапы, на которые разбита задача</p>
+        <p>Первый этап. Осуществить подготовку и настройку среды исполнения системы СРР в среде виртуализации QEMU. Осуществить установку СРР, запустить один рабочий узел и осуществить тестирование на наличие уязвимостей и узких мест в реализации СРР.</p>
+        <p>Второй этап. Осуществить подключение к удаленному серверу, на котором установлена СРР, осуществить тестирование на наличие уязвимостей и узких мест в реализации.</p>
+        <p>c) Userflow как должно работать решение</p>
+        <p>Определение узких мест и уязвимостей в реализации СРР. Критериями (метриками) являются степень (уровень) критичности.</p>
+        <p>d) Идеи решений если считаете нужным</p>
+        <p>Провести нагрузочные тестирования, тестирования на наличие уязвимостей, fuzzing тестирование, поиск багов.</p>
+        <br>
+        <p>3) Данные (если есть)</p>
+        <p>a) Образ СРР для QEMU</p>
+        <br>
+        <p>4) Ограничения на технологии (если есть)</p>
+        <p>Ограничений на проведение тестирований нет, ищем все баги и уязвимости.</p>
+        <br>
+        <p>5) Контакты</p>
+        <p>a) Список экспертов на площадке (…)</p>
+        <p>b) Контакты людей к кому обращаться с вопросами (…)</p>
+        <br>
+        <p>6) Критерии оценки решений</p>
+        <p>a) Что хотите увидеть на чекпоинтах</p>
+        <p>Описание багов, уязвимостей, иные метрики, которые позволят улучшить СРР.</p>
+        <p>b) Что хотите увидеть на финальной презентации</p>
+        <p>Описание процесса тестирования, результаты тестирования, предложения по улучшению и решению проблем. </p>
+        <p>c) Формальные критерии (бизнес/прототип/презентация)</p>
+        <p>20% презентация, 50% работоспособность, 30% предложение по решению</p>
+        <br>
+        <p>7) Общие советы участникам</p>
+        <p>Найденная уязвимость или бага – шаг к улучшению продукта.</p>
+      `
+    },
+    {
+      title: 'Задача #2',
+      detail: `
+        <p>1) Общая формулировка задачи в одно предложение</p>
+        <p><strong>Разработка программного обеспечения для задач автоматизации поиска уязвимостей в системе распределённого реестра</strong></p>
+        <br>
+        <p>Описание окружения, в котором возникает задача</p>
+        <p>a) Описание окружения</p>
+        <p>Первый этап: среда виртуализации QEMU</p>
+        <p>Второй этап: персональные компьютеры/сервера</p>
+        <br>
+        <p>b) Этапы, на которые разбита задача</p>
+        <p>Первый этап. Осуществить подготовку и настройку среды исполнения системы СРР в среде виртуализации QEMU. Осуществить установку СРР, запустить один рабочий узел и осуществить тестирование на наличие уязвимостей и узких мест в реализации СРР. </p>
+        <p>Второй этап. Осуществить подключение к удаленному серверу, на котором установлена СРР, осуществить тестирование на наличие уязвимостей и багов в реализации. Разработать программное обеспечение для поиска уязвимостей в СРР и смарт-контрактах. </p>
+        <br>
+        <p>c) Userflow как должно работать решение</p>
+        <p>Запуск программного обеспечения должен на выходе выдавать информацию о потенциально найденных уязвимостях в СРР и смарт-контрактах.  </p>
+        <br>
+        <p>d) Идеи решений если считаете нужным</p>
+        <p>Написать ПО реализующее функции поиска по самым популярным уязвимостям применительно к СРР и смарт-контрактам. </p>
+        <br>
+        <p>2) Данные (если есть)</p>
+        <p>a) Образ СРР для QEMU</p>
+        <br>
+        <p>3) Ограничения на технологии (если есть)</p>
+        <p>Ограничений на разработку ПО нет. </p>
+        <br>
+        <p>4) Контакты</p>
+        <p>a) Список экспертов на площадке (…)</p>
+        <p>b) Контакты людей к кому обращаться с вопросами (…)</p>
+        <br>
+        <p>5) Критерии оценки решений</p>
+        <p>a) Что хотите увидеть на чекпоинтах</p>
+        <p>Прототип программного обеспечения поиска уязвимостей по заданным критериям. </p>
+        <p>b) Что хотите увидеть на финальной презентации</p>
+        <p>Автоматизированный поиск уязвимостей в виде набора скриптов или ПО. </p>
+        <p>c) Формальные критерии (бизнес/прототип/презентация)</p>
+        <p>20% презентация, 50% работоспособность, 30% потенциал развития продукта.</p>
+        <br>
+        <p>6) Общие советы участникам</p>
+        <p>Найденная уязвимость или бага – шаг к улучшению продукта.</p>
+      `
+    }
+  ]
+
+  const taskModal = document.querySelector("#taskDetailModal");
+
+  // заполняем данными
+  taskModal.querySelector("#taskDetailModalLabel").innerHTML = tasks[id].title;
+  taskModal.querySelector("#taskDetail").innerHTML = tasks[id].detail;
+
+  // открываем модальное окно
+  document.querySelector('.shadow').style.display = 'block';
+  taskModal.style.display = 'block';
+  taskModal.classList.add('show');
+  document.querySelector('html').classList.add('modal-open');
+
+}
+</script>
